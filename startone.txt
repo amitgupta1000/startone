@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Valorant Algebra App</title>
+</head>
+<body>
+
+<h1>Valorant Algebra App</h1>
+
+<div id="lesson">
+<h2>Lesson</h2>
+<p>Learn basic concepts in algebra using Valorant as a game.</p>
+
+<ul>
+<li>Variables</li>
+<li>Expressions</li>
+<li>Equations</li>
+<li>Linear equations</li>
+<li>Slope-intercept form</li>
+</ul>
+
+<p>Click on a topic to learn more.</p>
+</div>
+
+<script>
+// Function to display the lesson content for a given topic.
+function displayLessonContent(topic) {
+    var lessonContent = document.getElementById("lessonContent");
+
+    switch (topic) {
+        case "Variables":
+            lessonContent.innerHTML = "Variables are used to represent unknown or changing values. In Valorant, you can use variables to represent things like the number of kills you have, the amount of money you have, or the damage you have done.";
+            break;
+        case "Expressions":
+            lessonContent.innerHTML = "Expressions are combinations of variables, numbers, and operators. Operators are symbols that tell the computer how to perform a calculation. For example, the operator `+` means addition, the operator `-` means subtraction, the operator `*` means multiplication, and the operator `/` means division.";
+            break;
+        case "Equations":
+            lessonContent.innerHTML = "Equations are statements that two expressions are equal. For example, the equation `kills + 1 = 10` means that the number of kills you have plus one is equal to 10.";
+            break;
+        case "Linear equations":
+            lessonContent.innerHTML = "Linear equations are equations in which the highest power of any variable is 1. For example, the equation `x + 2 = 5` is a linear equation.";
+            break;
+        case "Slope-intercept form":
+            lessonContent.innerHTML = "The slope-intercept form of a linear equation is `y = mx + b`, where `m` is the slope of the line and `b` is the y-intercept. The slope of a line tells you how much the line rises or falls for every unit it moves to the right. The y-intercept is the point where the line crosses the y-axis.";
+            break;
+        default:
+            lessonContent.innerHTML = "Invalid topic.";
+    }
+}
+
+// Event listener for the topic links.
+var topicLinks = document.getElementsByClassName("topicLink");
+for (var i = 0; i < topicLinks.length; i++) {
+    topicLinks[i].addEventListener("click", function() {
+        displayLessonContent(this.innerHTML);
+    });
+}
+</script>
+
+</body>
+</html>
